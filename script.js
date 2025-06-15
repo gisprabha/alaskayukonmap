@@ -93,7 +93,7 @@ Object.values(layers).forEach(layer => layer.addTo(map));
 // Layer control on top left
 L.control.layers(null, layers, {
   collapsed: false,
-  position: 'topleft'
+  position: 'topright'  // <-- changed here
 }).addTo(map);
 
 // Legend on bottom right
