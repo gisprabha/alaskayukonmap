@@ -50,7 +50,12 @@ const geojsonFiles = [
   {url: 'data/RailwayTrack.geojson', layer: layers.Railway, style: {color: '#444', dashArray: '4'}},
   {url: 'data/Roads.geojson', layer: layers.Roads, dualLine: true},
   {url: 'data/TouristicCities.geojson', layer: layers.Cities, icon: icons.city},
-  {url: 'data/TouristicPlaces.geojson', layer: layers["Tourist Spots"], icon: icons.place},
+  {
+    url: 'data/TouristicPlaces.geojson',
+    layer: layers["Tourist Spots"],
+    icon: icons.place,
+    displayAdditionalInfo: true
+  },
   {url: 'data/Trailheads.geojson', layer: layers.Trails, icon: icons.trail}
 ];
 
@@ -58,42 +63,32 @@ geojsonFiles.forEach(item => {
   fetch(item.url)
     .then(res => res.json())
     .then(data => {
-      if (item.dualLine) {
-        // Black base layer (border)
-        L.geoJSON(data, {
-          style: {color: 'black', weight: 7}
-        }).addTo(item.layer);
-
-        // Yellow road on top
-        L.geoJSON(data, {
-          style: {color: '#FFD700', weight: 4},
-          onEachFeature: (feature, layer) => {
-            const name = feature.properties.name || "Unnamed Road";
-            layer.bindPopup(`<b>${name}</b>`);
+      L.geoJSON(data, {
+        pointToLayer: (feature, latlng) => {
+          return item.icon ? L.marker(latlng, {icon: item.icon}) : L.marker(latlng);
+        },
+        style: item.style || null,
+        onEachFeature: (feature, layer) => {
+          let popupContent = `<b>${feature.properties.name || "Unnamed"}</b>`;
+          if (item.displayAdditionalInfo && feature.properties) {
+            const { description, url, image } = feature.properties;
+            if (description) popupContent += `<p>${description}</p>`;
+            if (url) popupContent += `<a href="${url}" target="_blank">Learn more</a><br>`;
+            if (image) popupContent += `<img src="${image}" alt="${feature.properties.name}" style="width:100%; max-height:150px;">`;
           }
-        }).addTo(item.layer);
-      } else {
-        L.geoJSON(data, {
-          pointToLayer: (feature, latlng) => {
-            return item.icon ? L.marker(latlng, {icon: item.icon}) : L.marker(latlng);
-          },
-          style: item.style || null,
-          onEachFeature: (feature, layer) => {
-            const name = feature.properties.name || "Unnamed";
-            layer.bindPopup(`<b>${name}</b>`);
-          }
-        }).addTo(item.layer);
-      }
+          layer.bindPopup(popupContent);
+        }
+      }).addTo(item.layer);
     });
 });
 
 // Add all layers to map
 Object.values(layers).forEach(layer => layer.addTo(map));
 
-// Layer control on top left
+// Layer control on top right
 L.control.layers(null, layers, {
   collapsed: false,
-  position: 'topright'  // <-- changed here
+  position: 'topright'
 }).addTo(map);
 
 // Legend on bottom right
