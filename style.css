@@ -7,7 +7,6 @@ html, body {
   overflow: hidden; /* Prevent scrollbars */
 }
 
-
 /* Map Container */
 #map {
   width: 100%;
@@ -42,7 +41,7 @@ html, body {
   font-weight: 700;
   margin: 0;
   color: #cce7ff; /* light icy blue */
-   font-family: 'Georgia', serif;
+  font-family: 'Georgia', serif;
 }
 
 #subtitle {
@@ -62,10 +61,11 @@ html, body {
   bottom: 0;
   height: calc(100% - 60px);
 }
+
 /* Legend (Bottom Right) */
 .legend {
   position: absolute;
-  bottom: 0px;
+  bottom: 20px;
   right: 20px;
   background: rgba(255, 255, 255, 0.95);
   padding: 15px;
@@ -93,14 +93,13 @@ html, body {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0,0,0,0.15);
-
-  min-width: 180px !important;   /* added */
-  max-width: 220px !important;   /* added */
-  width: auto !important;        /* make width dynamic */
-  box-sizing: border-box;        /* include padding/border in width */
+  min-width: 180px !important;
+  max-width: 220px !important;
+  width: auto !important;
+  box-sizing: border-box;
 }
 
-/* Adjust zoom control so it doesn't overlap (optional) */
+/* Adjust zoom control to avoid overlap */
 .leaflet-control-zoom {
   top: 150px !important;
   right: 20px !important;
@@ -121,6 +120,41 @@ html, body {
   font-size: 16px;
 }
 
+/* Popup Styling */
+.leaflet-popup-content {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.leaflet-popup-content h3 {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1e3c72;
+}
+
+.leaflet-popup-content p {
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+.leaflet-popup-content a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.leaflet-popup-content a:hover {
+  text-decoration: underline;
+}
+
+.leaflet-popup-content img {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 /* ----------- MOBILE STYLES ----------- */
 @media (max-width: 600px) {
@@ -129,10 +163,10 @@ html, body {
     position: absolute;
     top: 90px !important; /* push below fixed header */
     right: 15px !important;
-    z-index: 1001; /* above the map, below the header */
+    z-index: 1001;
   }
 
-  /* Layers Control (if used) */
+  /* Layers Control */
   .leaflet-control-layers {
     top: 90px !important;
     right: 15px !important;
@@ -142,7 +176,7 @@ html, body {
     z-index: 1001;
   }
 
-  /* Your custom legend (assumes .legend class) */
+  /* Custom Legend */
   .legend {
     position: absolute;
     bottom: 20px;
