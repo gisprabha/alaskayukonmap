@@ -49,7 +49,7 @@ const geojsonFiles = [
   {url: 'data/MileMarkers.geojson', layer: layers["Mile Markers"], icon: icons.marker},
   {url: 'data/RailwayTrack.geojson', layer: layers.Railway, style: {color: '#444', dashArray: '4'}},
   {url: 'data/Roads.geojson', layer: layers.Roads, dualLine: true},
-  {url: 'data/TouristicCities.geojson', layer: layers.Cities, icon: icons.city},
+  {url: 'data/TouristicCities.geojson', layer: layers.Cities, icon: icons.city, displayAdditionalInfo: true},
   {
     url: 'data/TouristicPlaces.geojson',
     layer: layers["Tourist Spots"],
