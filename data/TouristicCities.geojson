@@ -1,20 +1,126 @@
 {
-"type": "FeatureCollection",
-"name": "cities",
-"features": [
-{ "type": "Feature", "properties": { "name": "Anchorage" }, "geometry": { "type": "Point", "coordinates": [ -149.894145585303505, 61.218087965777158 ] } },
-{ "type": "Feature", "properties": { "name": "Fairbanks" }, "geometry": { "type": "Point", "coordinates": [ -147.729722604066637, 64.840562830988944 ] } },
-{ "type": "Feature", "properties": { "name": "Juneau" }, "geometry": { "type": "Point", "coordinates": [ -134.415224626200143, 58.310764213705966 ] } },
-{ "type": "Feature", "properties": { "name": "Whitehorse" }, "geometry": { "type": "Point", "coordinates": [ -135.054809548160506, 60.720276743558287 ] } },
-{ "type": "Feature", "properties": { "name": "Dawson City" }, "geometry": { "type": "Point", "coordinates": [ -139.44939370811403, 64.080367730856068 ] } },
-{ "type": "Feature", "properties": { "name": "Seward" }, "geometry": { "type": "Point", "coordinates": [ -149.445412201322029, 60.104088415260037 ] } },
-{ "type": "Feature", "properties": { "name": "Kenai" }, "geometry": { "type": "Point", "coordinates": [ -151.266522778191671, 60.556096941486771 ] } },
-{ "type": "Feature", "properties": { "name": "Denali" }, "geometry": { "type": "Point", "coordinates": [ -148.8994390021399, 63.752019074746073 ] } },
-{ "type": "Feature", "properties": { "name": "Skagway" }, "geometry": { "type": "Point", "coordinates": [ -135.317242583890589, 59.459117063253558 ] } },
-{ "type": "Feature", "properties": { "name": "Nome" }, "geometry": { "type": "Point", "coordinates": [ -165.405295049290032, 64.501581433355256 ] } },
-{ "type": "Feature", "properties": { "name": "Wrangell" }, "geometry": { "type": "Point", "coordinates": [ -152.408146528936328, 57.790430356976344 ] } },
-{ "type": "Feature", "properties": { "name": "Seward" }, "geometry": { "type": "Point", "coordinates": [ -132.385690216454378, 56.470003301718549 ] } },
-{ "type": "Feature", "properties": { "name": "Sitka" }, "geometry": { "type": "Point", "coordinates": [ -135.334623761255784, 57.052224980795415 ] } },
-{ "type": "Feature", "properties": { "name": "Ketchikan" }, "geometry": { "type": "Point", "coordinates": [ -131.650279732249146, 55.34257536277255 ] } }
-]
-}
+    "type": "FeatureCollection",
+    "name": "cities",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Anchorage",
+          "description": "The largest city in Alaska, known for its cultural sites, trails, and proximity to wildlife.",
+          "url": "https://en.wikipedia.org/wiki/Anchorage,_Alaska",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Anchorage%2C_Alaska_from_Glenn_Alps_Trailhead.jpg"
+        },
+        "geometry": { "type": "Point", "coordinates": [-149.894145585303505, 61.218087965777158] }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Fairbanks",
+          "description": "A city in central Alaska famous for its midnight sun and northern lights.",
+          "url": "https://en.wikipedia.org/wiki/Fairbanks,_Alaska",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Fairbanks_and_Hayes_Range.jpg/2560px-Fairbanks_and_Hayes_Range.jpg"
+        },
+        "geometry": { "type": "Point", "coordinates": [-147.729722604066637, 64.840562830988944] }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Juneau",
+          "description": "The capital city of Alaska, surrounded by mountains and glaciers.",
+          "url": "https://en.wikipedia.org/wiki/Juneau,_Alaska",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Queen_Elizabeth_%28ship%2C_2010%29_in_Juneau%2C_Alaska_2024-08-15.jpg/2560px-Queen_Elizabeth_%28ship%2C_2010%29_in_Juneau%2C_Alaska_2024-08-15.jpg"
+        },
+        "geometry": { "type": "Point", "coordinates": [-134.415224626200143, 58.310764213705966] }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Whitehorse",
+          "description": "The capital of Yukon, known for its outdoor adventures and historical landmarks.",
+          "url": "https://en.wikipedia.org/wiki/Whitehorse,_Yukon",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Whitehorse%2C_Yukon_in_2019.jpg"
+        },
+        "geometry": { "type": "Point", "coordinates": [-135.054809548160506, 60.720276743558287] }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Dawson City",
+          "description": "A historic town in Yukon, famous for its Gold Rush heritage.",
+          "url": "https://en.wikipedia.org/wiki/Dawson_City",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Dawson_Yukon_June_07.jpg"
+        },
+        "geometry": { "type": "Point", "coordinates": [-139.44939370811403, 64.080367730856068] }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Seward",
+          "description": "A scenic harbor town in Alaska, gateway to Kenai Fjords National Park.",
+          "url": "https://en.wikipedia.org/wiki/Seward,_Alaska",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/Seward_Alaska_aerial_view.jpg"
+        },
+        "geometry": { "type": "Point", "coordinates": [-149.445412201322029, 60.104088415260037] }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Kenai",
+          "description": "A city in Alaska known for its fishing and stunning natural beauty.",
+          "url": "https://en.wikipedia.org/wiki/Kenai,_Alaska",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Kenai_AK_aerial.jpg"
+        },
+        "geometry": { "type": "Point", "coordinates": [-151.266522778191671, 60.556096941486771] }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Denali",
+          "description": "Home to Denali National Park and Preserve, featuring North America’s tallest peak.",
+          "url": "https://en.wikipedia.org/wiki/Denali_National_Park_and_Preserve",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Every_Road-_Denali_%287945497984%29.jpg/2560px-Every_Road-_Denali_%287945497984%29.jpg"
+        },
+        "geometry": { "type": "Point", "coordinates": [-148.8994390021399, 63.752019074746073] }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Skagway",
+          "description": "A historic town in Alaska, known for its Gold Rush history and scenic railroads.",
+          "url": "https://en.wikipedia.org/wiki/Skagway,_Alaska",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Skagway_aerial_view.jpg"
+        },
+        "geometry": { "type": "Point", "coordinates": [-135.317242583890589, 59.459117063253558] }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Nome",
+          "description": "A remote town in Alaska, famous for its gold mining history.",
+          "url": "https://en.wikipedia.org/wiki/Nome,_Alaska",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Nome_Alaska_aerial_2006.jpg"
+        },
+        "geometry": { "type": "Point", "coordinates": [-165.405295049290032, 64.501581433355256] }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Sitka",
+          "description": "A city in Alaska with rich Tlingit culture and Russian heritage.",
+          "url": "https://en.wikipedia.org/wiki/Sitka,_Alaska",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sitka_84_Elev_135.jpg/2560px-Sitka_84_Elev_135.jpg"
+        },
+        "geometry": { "type": "Point", "coordinates": [-135.334623761255784, 57.052224980795415] }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Ketchikan",
+          "description": "Known as the Salmon Capital of the World, with vibrant totem poles and scenic views.",
+          "url": "https://en.wikipedia.org/wiki/Ketchikan,_Alaska",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Ketchikan%2C_Alaska%2C_Estados_Unidos%2C_2017-08-16%2C_DD_59-63_PAN.jpg/2880px-Ketchikan%2C_Alaska%2C_Estados_Unidos%2C_2017-08-16%2C_DD_59-63_PAN.jpg"
+        },
+        "geometry": { "type": "Point", "coordinates": [-131.650279732249146, 55.34257536277255] }
+      }
+    ]
+  }
